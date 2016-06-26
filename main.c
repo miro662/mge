@@ -4,6 +4,8 @@
 
 // MGE entry point
 int main(int argc, char* argv[]) {
-  printf("Hello %s! Hello, %s!\n", "world", "MGE");
+  // Load systems
+  MGE_requireSystem(MGE_S_Oversystem);
+
   return 0;
 }

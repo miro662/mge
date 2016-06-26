@@ -8,5 +8,11 @@
 // ----- Standard C library -----
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+
+// ===== Engine includes =====
+
+// ----- Systems -----
+#include <systems/oversystem.h>
 
 #endif
