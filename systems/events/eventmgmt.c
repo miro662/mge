@@ -2,7 +2,7 @@
 
 #include <mge.h>
 
-void MGE_AddCallback(MGE_Event* event, void (*callback)(void*)) {
+void MGE_addCallback(MGE_Event* event, void (*callback)(void*)) {
   MGEI_EventCallback* newCallback = malloc(sizeof(MGEI_EventCallback));
   newCallback->callback = callback;
   newCallback->nextCallback = (struct MGEI_EventCallback*) *event;
@@ -10,7 +10,7 @@ void MGE_AddCallback(MGE_Event* event, void (*callback)(void*)) {
   *event = newCallback;
 }
 
-void MGE_Call(MGE_Event event, void* data) {
+void MGE_call(MGE_Event event, void* data) {
   MGEI_EventCallback* next = event;
   while (next != NULL) {
     MGEI_EventCallback* current = next;
@@ -19,7 +19,7 @@ void MGE_Call(MGE_Event event, void* data) {
   }
 }
 
-void MGE_FreeEvent(MGE_Event event) {
+void MGE_freeEvent(MGE_Event event) {
   MGEI_EventCallback* next = event;
   while (next != NULL) {
     MGEI_EventCallback* current = next;
