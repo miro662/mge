@@ -1,6 +1,6 @@
 // main.c - contains MGE entry point
 
-#include "mge/mge.h"
+#include <mge.h>
 
 // MGE entry point
 int main(int argc, char* argv[]) {
